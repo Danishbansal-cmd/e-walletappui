@@ -6,11 +6,11 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 700),(){
+    Future.delayed(const Duration(milliseconds: 1500),(){
       Get.toNamed('homePage');
     });
     return Scaffold(
-      backgroundColor: Color(0xff1A87DD),
+      backgroundColor: Theme.of(context).colorScheme.primary,
       body: SafeArea(
         child: Center(
           child: Column(

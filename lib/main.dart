@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:walletappui/Pages/Themes/themes.dart';
 import 'package:walletappui/Pages/home_page.dart';
 import 'package:walletappui/Pages/splash_page.dart';
 
@@ -16,9 +17,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.lightTheme(context),  // MyTheme.darkTheme(context),
+      themeMode: ThemeMode.system,
       initialRoute: "/splashPage",
       getPages: [
         GetPage(
