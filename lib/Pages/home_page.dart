@@ -15,8 +15,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int index = 0;
-  final screens = [HomeScreen(),TransactionScreen(),ContactsScreen(),ProfileScreen()];
-
+  final screens = [
+    HomeScreen(),
+    TransactionScreen(),
+    ContactsScreen(),
+    ProfileScreen()
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,32 +29,33 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(20), topLeft: Radius.circular(20)),
-          boxShadow: [
-            BoxShadow(
-              color: Color(0x09000000),
-              spreadRadius: 0,
-              blurRadius: 10,
-              offset: Offset(0, -10),
-            ),
-          ],
+          // borderRadius: BorderRadius.only(
+          //     topRight: Radius.circular(20), topLeft: Radius.circular(20)),
         ),
         child: Container(
           height: 100,
           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-          // decoration: BoxDecoration(
-          //   // borderRadius: BorderRadius.circular(15),
-          // ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.white,
+            boxShadow: const [
+              BoxShadow(
+                color: Color.fromARGB(22, 0, 0, 0),
+                spreadRadius: 0,
+                blurRadius: 15,
+                offset: Offset(0, -10),
+              ),
+            ],
+          ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: BottomNavigationBar(
-              onTap: (index){
+              onTap: (index) {
                 setState(() {
                   this.index = index;
                 });
               },
-              backgroundColor: Color.fromARGB(255, 74, 141, 11),
+              // backgroundColor: Color.fromARGB(255, 74, 141, 11),
               currentIndex: index,
               showUnselectedLabels: true,
               unselectedItemColor: Color.fromARGB(255, 130, 130, 130),

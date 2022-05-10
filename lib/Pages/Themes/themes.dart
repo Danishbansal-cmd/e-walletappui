@@ -9,6 +9,12 @@ class MyTheme{
           secondary: Color(0xffF8BB18),
           
         ),
+        textTheme: TextTheme(
+          bodyText1: TextStyle(
+                  color: MyTheme.secondColor,
+                  fontSize: 16,
+                ),
+        ),
   );
   static ThemeData darkTheme(BuildContext context) => ThemeData(
     colorScheme:const ColorScheme.dark(
@@ -19,4 +25,6 @@ class MyTheme{
 
   static Color firstColor = Color.fromARGB(173, 255, 255, 255);
   static Color secondColor = Colors.white;
+  static Color thirdColor = Colors.black;
+  static Color fourthColor = Colors.grey.shade500;
 }
